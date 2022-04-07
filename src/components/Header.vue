@@ -1,22 +1,154 @@
 <template>
-  <div>
-      <h1>Header</h1>
-      <JumboArrivals/>
-  </div>
+  <header> 
+      <div class="wrapper">
+            <div class="my-container"> 
+                <div class="conteiner-fluid">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-6 d-flex align-items-center"> 
+                            <a href="">
+                                <font-awesome-icon icon="fa-brands fa-facebook-f" class="mx-2" />
+                            </a>
+                            <a href="">
+                                <font-awesome-icon icon="fa-brands fa-twitter" class="mx-2"/>
+                            </a>
+                            <a href="">
+                                <font-awesome-icon icon="fa-brands fa-instagram" class="mx-2"/> 
+                            </a>
+                            <a href=""> 
+                                <font-awesome-icon icon="fa-brands fa-youtube" class="mx-2"/>
+                            </a>
+                        </div>
+                        <div class="col-6 d-flex my-col justify-content-center "> 
+                            <div class="col-3  my-col ">
+                                <a href="#">
+                                    Shopping Cart
+                                </a></div>
+                            <div class="col-4  my-col border-start border-end px-2">
+                                <a href="#">
+                                    My Account 
+                                    <font-awesome-icon icon="fa-solid fa-angle-down" class="mx-2"/>
+                                </a>
+                            </div>
+                            <div class="col-5 my-col">
+                                <a href="#">
+                                    <font-awesome-icon icon="fa-solid fa-cart-shopping" class="mx-2"/>
+                                    Cart
+                                    <font-awesome-icon icon="fa-solid fa-angle-down" class="mx-2"/> 
+                                    
+                                </a>
+                            </div>
+                            
+                        </div> 
+
+                    </div> 
+                    <section id="navbar">
+                        <div class="row my-nav align-items-center">
+                            <div class="col">
+                                    <img src="../assets/img-progetto/classic_shop_logo2x.png" alt="Avada Logo">
+                            </div>
+                            <div class="col-7 ">
+                                <ul class="d-flex justify-content-evenly">
+                                    <li v-for="(element, index) in nav" :key="index">
+                                            <a href="#">{{element}}</a> 
+                                            <font-awesome-icon icon="fa-solid fa-angle-down" class="mx-2"/>
+                                    </li>
+
+                                </ul> 
+                            </div> 
+                            <div class="col d-flex justify-content-between align-items-center">
+                                <button class="btn btn-primary rounded-pill px-5">
+                                    shop now!
+                                </button> 
+                                <font-awesome-icon icon="fa-solid fa-magnifying-glass"/>
+                            </div>
+                        </div> 
+                    </section>
+                    
+                </div>
+                </div>  
+                
+        </div>  
+    </header>
 </template>
 
 
 <script> 
-import JumboArrivals from "./JumboArrivals.vue"
 export default { 
-    name: "HeaderShop",
-    components:{
-        JumboArrivals,
-    }
+    name: "HeaderShop", 
+    data: function (){
+        return{
+            nav:[
+                "Home",
+                "Shop",   
+                "Products",
+                "Category",
+                "News",
+                "Elements",
 
+        ]
+        }
+        
+    }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../assets/style.scss";  
+header{
+    background-color: white;
+} 
+.wrapper{
+    width: 100%; 
+    height: 60px;
+    border-bottom: 1px solid $cascade; 
+        .my-container{
+            height: 60px;
 
+            a{
+                text-decoration: none; 
+                color: $fedora;
+                :hover{
+                    color: $shark;
+                }
+            }
+            
+            .my-col{
+                height: 60px; 
+                :hover{
+                    background-color: silver;
+                    color: $shark;
+                } 
+
+                
+            }
+        } 
+    .my-nav{
+        height: 100px;
+    } 
+    
+        img{
+        width: 150px;
+        } 
+  
+    
+    ul{ 
+        margin: 0;
+        padding: 0;
+        
+        li{
+            border-top: 2px solid transparent;
+            line-height: 100px;
+            display: inline-block;
+            margin-right: 1rem; 
+            height: 100px; 
+            list-style: none; 
+                &:hover{
+                border-top: 2px solid $hovelock;
+            }  
+            
+        }
+    }
+
+}
+    
 </style>

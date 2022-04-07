@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header/> 
+    <JumboArrivals/> 
     <Main/> 
     <Footer/>
   </div>
@@ -8,6 +9,7 @@
 
 <script>
 import Header from './components/Header.vue' 
+import JumboArrivals from "./components/JumboArrivals.vue" 
 import Main from "./components/Main.vue" 
 import Footer from "./components/Footer.vue"
 
@@ -15,6 +17,7 @@ export default {
   name: 'App',
   components: { 
     Header, 
+    JumboArrivals, 
     Main, 
     Footer,
     
@@ -22,13 +25,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss"> 
+@import "./assets/style.scss";  
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
