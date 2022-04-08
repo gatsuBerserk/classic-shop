@@ -1,9 +1,11 @@
 <template>
-  <header> 
-      <div class="wrapper">
+    <header class="wrapper minW"> 
+         <!--Social and Cart  -->
+        <section id="up" class="border-bottom">
             <div class="my-container"> 
                 <div class="conteiner-fluid">
                     <div class="row d-flex align-items-center">
+                        <!-- Social -->
                         <div class="col-6 d-flex align-items-center"> 
                             <a href="">
                                 <font-awesome-icon icon="fa-brands fa-facebook-f" class="mx-2" />
@@ -17,12 +19,14 @@
                             <a href=""> 
                                 <font-awesome-icon icon="fa-brands fa-youtube" class="mx-2"/>
                             </a>
-                        </div>
+                        </div> 
+                        <!-- Cart -->
                         <div class="col-6 d-flex my-col justify-content-center "> 
                             <div class="col-3  my-col ">
                                 <a href="#">
                                     Shopping Cart
-                                </a></div>
+                                </a>
+                            </div>
                             <div class="col-4  my-col border-start border-end px-2">
                                 <a href="#">
                                     My Account 
@@ -34,41 +38,40 @@
                                     <font-awesome-icon icon="fa-solid fa-cart-shopping" class="mx-2"/>
                                     Cart
                                     <font-awesome-icon icon="fa-solid fa-angle-down" class="mx-2"/> 
-                                    
                                 </a>
                             </div>
-                            
                         </div> 
-
                     </div> 
+                </div> 
+            </div>       
+        </section>    
+                <!--Shopping NavBar  -->
                     <section id="navbar">
-                        <div class="row my-nav align-items-center">
-                            <div class="col">
-                                    <img src="../assets/img-progetto/classic_shop_logo2x.png" alt="Avada Logo">
-                            </div>
-                            <div class="col-7 ">
-                                <ul class="d-flex justify-content-evenly">
-                                    <li v-for="(element, index) in nav" :key="index">
-                                            <a href="#">{{element}}</a> 
-                                            <font-awesome-icon icon="fa-solid fa-angle-down" class="mx-2"/>
-                                    </li>
-
-                                </ul> 
+                        <div class="my-container"> 
+                            <div class="container-fluid">
+                                <div class="row my-nav align-items-center">
+                                    <div class="col p-0">
+                                        <img src="../assets/img-progetto/classic_shop_logo2x.png" alt="Avada Logo">
+                                    </div>
+                                    <div class="col-7 ">
+                                        <ul class="d-flex justify-content-evenly">
+                                            <li v-for="(element, index) in nav" :key="index">
+                                                    <a href="#">{{element}}</a> 
+                                                    <font-awesome-icon icon="fa-solid fa-angle-down" class="mx-2"/>
+                                            </li>
+                                        </ul> 
+                                    </div> 
+                                    <div class="col d-flex justify-content-around align-items-center p-0">
+                                        <button class="btn btn-primary rounded-pill px-5 text-uppercase">
+                                            shop now!
+                                        </button> 
+                                        <font-awesome-icon icon="fa-solid fa-magnifying-glass"/>
+                                    </div>
+                                </div> 
                             </div> 
-                            <div class="col d-flex justify-content-between align-items-center">
-                                <button class="btn btn-primary rounded-pill px-5">
-                                    shop now!
-                                </button> 
-                                <font-awesome-icon icon="fa-solid fa-magnifying-glass"/>
-                            </div>
-                        </div> 
-                    </section>
-                    
-                </div>
-                </div>  
-                
-        </div>  
-    </header>
+                        </div>
+                  </section>
+    </header>  
 </template>
 
 
@@ -99,11 +102,9 @@ header{
 } 
 .wrapper{
     width: 100%; 
-    height: 60px;
-    border-bottom: 1px solid $cascade; 
+    height: 150px; 
         .my-container{
             height: 60px;
-
             a{
                 text-decoration: none; 
                 color: $fedora;
@@ -111,30 +112,24 @@ header{
                     color: $shark;
                 }
             }
-            
             .my-col{
                 height: 60px; 
                 :hover{
                     background-color: silver;
                     color: $shark;
-                } 
-
-                
+                }
             }
-        } 
-    .my-nav{
+        }
+    section#navbar{
+        .my-nav{
         height: 100px;
-    } 
-    
+        } 
         img{
         width: 150px;
         } 
-  
-    
-    ul{ 
+        ul{ 
         margin: 0;
         padding: 0;
-        
         li{
             border-top: 2px solid transparent;
             line-height: 100px;
@@ -144,10 +139,11 @@ header{
             list-style: none; 
                 &:hover{
                 border-top: 2px solid $hovelock;
-            }  
-            
+                }  
+            }
         }
-    }
+    } 
+    
 
 }
     

@@ -1,12 +1,15 @@
 <template>
-  <div>
-        
-  </div>
+      <Jumbo/>  
+    
 </template>
 
 <script>
+import Jumbo from "../components/Jumbo.vue";
 export default { 
-    name:"MainShop",
+    name:"MainShop", 
+    components:{
+      Jumbo, 
+    }
 
 }
 </script>
