@@ -21,19 +21,19 @@
                             </a>
                         </div> 
                         <!-- Cart -->
-                        <div class="col-6 d-flex my-col justify-content-center "> 
-                            <div class="col-3  my-col ">
+                        <div class="col-6 d-flex dCenter justify-content-center "> 
+                            <div class="col-3  dCenter ">
                                 <a href="#">
                                     Shopping Cart
                                 </a>
                             </div>
-                            <div class="col-4  my-col border-start border-end px-2">
+                            <div class="col-4  dCenter border-start border-end px-2">
                                 <a href="#">
                                     My Account 
                                     <font-awesome-icon icon="fa-solid fa-angle-down" class="mx-2"/>
                                 </a>
                             </div>
-                            <div class="col-5 my-col">
+                            <div class="col-5 dCenter">
                                 <a href="#">
                                     <font-awesome-icon icon="fa-solid fa-cart-shopping" class="mx-2"/>
                                     Cart
@@ -112,7 +112,7 @@ header{
                     color: $shark;
                 }
             }
-            .my-col{
+            .dCenter{
                 height: 60px; 
                 :hover{
                     background-color: silver;
