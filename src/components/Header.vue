@@ -3,7 +3,7 @@
          <!--Social and Cart  -->
         <section id="up" class="border-bottom">
             <div class="my-container"> 
-                <div class="conteiner-fluid">
+                <div class="conteiner-fluid m-0">
                     <div class="row d-flex align-items-center">
                         <!-- Social -->
                         <div class="col-6 d-flex align-items-center"> 
