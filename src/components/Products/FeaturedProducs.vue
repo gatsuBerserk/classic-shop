@@ -36,7 +36,7 @@ export default {
         model:function(){
             if(this.futuredObject.model != null){
                 return("," + this.futuredObject.model)
-            }return ((""))
+            }return ("")
         }
     }
 }

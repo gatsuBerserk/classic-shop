@@ -1,40 +1,81 @@
 <template>
 <div>
    <Jumbo/>
-    <div class="my-container minW">
-       <div class="container-fluid">
-           <div class="row ">
-               <div class="col-12 text-center mt-5">
-                   <div class="title dCenter text-capitalize">
-                       <span>
-                       </span>
-                       <h1>
-                           featured producs
-                       </h1>
-                       <span>
-                       </span>
-                   </div> 
-                    <p> Must have products from our top sellers</p>
-               </div> 
-              <div class="col-6 offset-3 mt-5">
-                <div class="selection d-flex ">
-                  <div class="man"> Man</div>
-                  <div class="woman"> Woman</div>
-                  <div class="accessories">Accesories</div>
+        <div class="my-container minW">
+          <div class="container-fluid">
+              <div class="row ">
+                  <div class="col-12 text-center mt-5">
+                      <div class="title dCenter text-capitalize">
+                          <span>
+                          </span>
+                          <h1>
+                              featured producs
+                          </h1>
+                          <span>
+                          </span>
+                      </div> 
+                        <p> Must have products from our top sellers</p>
+                  </div> 
+                  <div class="col-6 offset-3 mt-5">
+                    <div class="selection d-flex ">
+                      <div class="man"> Man</div>
+                      <div class="woman"> Woman</div>
+                      <div class="accessories">Accesories</div>
 
-                </div>
-              </div>  
-           </div>
-       </div>
-      <div class="col-12 d-flex flex-wrap mt-3"> 
-          <FeaturedProducs 
-            v-for="(element, index) in Featured" :key="index"
-            :futuredObject="element"
-            /> 
+                    </div>
+                  </div>  
+              </div>
+          </div>
+          <div class="col-12 d-flex flex-wrap mt-3"> 
+              <FeaturedProducs 
+                v-for="(element, index) in Featured" :key="index"
+                :futuredObject="element"
+                /> 
+      </div> 
    </div>
-
-   </div> 
-   
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 d-flex flex-wrap minW">
+         
+           <BannerSeason 
+           v-for="(element, index) in bannerSeason" :key="index"
+                :seasonObject="element" 
+                /> 
+            
+        </div>
+      </div>
+    </div>  
+    <!-- carousel -->
+    <div class="my-container minW">
+      <div class="container-fluid">
+        <div class="row border position-relative"> 
+           <button  class="position-absolute next"> &#10094; </button> 
+           <h1>carousel</h1>
+          <Carousel  
+          v-for="(element, index) in Featured" :key="index" 
+          :image="element" 
+          />
+          
+            <button class="position-absolute previus" >&#10095;</button>
+        </div>
+      </div>
+    </div> 
+    <BannerShopping/> 
+    <div class="container-fluid">
+        <div class="row border position-relative"> 
+           <button  class="position-absolute next"> &#10094; </button> 
+           <h1>carousel</h1>
+          <Carousel  
+          v-for="(element, index) in Featured" :key="index" 
+          :image="element" 
+          />
+          
+            <button class="position-absolute previus" >&#10095;</button>
+        </div>
+      </div>
+      <BannerArtDirector/> 
+      <BlogBanner/>
+      <ProductVote/>
 </div>
      
     
@@ -42,16 +83,29 @@
 
 <script>
 import Jumbo from "../components/Jumbo.vue";
-import FeaturedProducs from './Products/FeaturedProducs.vue';
+import FeaturedProducs from './Products/FeaturedProducs.vue'; 
+import BannerSeason from "./Banner/BannerSeason.vue";
+import Carousel from "./Carousel/Carousel.vue"; 
+import BannerShopping from "./Banner/BannerShopping.vue" 
+import BannerArtDirector from "./Banner/BannerArtDirector.vue"
+import BlogBanner from "./Banner/Blog.vue"
+import ProductVote from "./Products/ProductVote.vue"
 
 export default { 
     name:"MainShop", 
     components:{
       Jumbo,
-      FeaturedProducs, 
+      FeaturedProducs,
+      BannerSeason,
+      Carousel,
+      BannerShopping,
+      BannerArtDirector,
+      BlogBanner,
+      ProductVote,
     }, 
      data: function(){
         return{
+            activeElement: 0,
             Featured:[
                 {
                     img:"black_elegant_leather_jacket.jpg",
@@ -90,6 +144,32 @@ export default {
                     priceActual: 96
                 },
 
+            ], 
+            bannerSeason:[
+                {
+                  img:"winter_collection_bg.jpg", 
+                  season:"Winter Collection", 
+                  description:"Stylish and warm", 
+                  textButtom:"viwe more", 
+                }, 
+                 {
+                  img:"spring_collection_bg.jpg", 
+                  season:"Sping Collection ", 
+                  description:"Bright and colorful", 
+                  textButtom:"viwe more", 
+                }, 
+                 {
+                  img:"autumn_collection_bg.jpg", 
+                  season:"Autumn Collection", 
+                  description:"Rich and confortable  ", 
+                  textButtom:"viwe more", 
+                }, 
+            ], 
+            carousel:[
+              {
+                img:""
+              }
+
             ]
         }
      }
@@ -99,6 +179,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style.scss"; 
+// da cancellare
+.border{
+  border: 1px solid black;
+}
+
 .my-container{ 
     div.title{ 
         h1{
@@ -129,4 +214,18 @@ export default {
 
     }
 }
+.next{
+      width: 30px;
+      height: 40px;
+      bottom: 50%;
+      left: 0%;
+
+    } 
+  .previus{
+    width: 30px;
+    height: 40px;
+    bottom: 50%;
+    right: 0%;
+
+  }
 </style>

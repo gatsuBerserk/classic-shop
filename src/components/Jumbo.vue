@@ -44,11 +44,11 @@ export default {
 .jumbo{
   position: relative; 
   height: 800px;
-  background-image: url("../assets/img-progetto/home1_slide_three_bg_2.jpg") ;
-  background-position: center;
-  background-size:cover; 
+  background: url('../assets/img-progetto/home1_slide_three_bg_2.jpg') no-repeat; 
   object-fit: contain;
-  background-repeat: no-repeat; 
+  background-position: center;
+  background-size:100%; 
+  
       div.offert { 
         position: absolute; 
         top:0%; 
