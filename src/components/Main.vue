@@ -76,6 +76,8 @@
       <BannerArtDirector/> 
       <BlogBanner/>
       <ProductVote/>
+      <BannerBrand/> 
+      
 </div>
      
     
@@ -90,6 +92,7 @@ import BannerShopping from "./Banner/BannerShopping.vue"
 import BannerArtDirector from "./Banner/BannerArtDirector.vue"
 import BlogBanner from "./Banner/Blog.vue"
 import ProductVote from "./Products/ProductVote.vue"
+import BannerBrand from "./Banner/BannerBrand.vue"
 
 export default { 
     name:"MainShop", 
@@ -102,6 +105,7 @@ export default {
       BannerArtDirector,
       BlogBanner,
       ProductVote,
+      BannerBrand,
     }, 
      data: function(){
         return{

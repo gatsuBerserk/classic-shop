@@ -3,7 +3,7 @@
   <div class="col-3"> 
     
       <figure >
-        <img :src="require(`../../assets/img-progetto/${image.img}`)" class="card-img-top" alt="...">
+        <img :src="`../../assets/img-progetto/${image.img}`" class="card-img-top" alt="...">
       </figure> 
     </div>
       
