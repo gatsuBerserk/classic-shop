@@ -19,14 +19,7 @@ export default {
     name: "FeaturedProduct",
     props:{
         futuredObject : Object
-    },
-    // methods:{
-    //     angebote:function(element){
-    //         if(element != null){
-    //             return ("$" + element)
-    //         }return(" ")
-    //     }
-    // } 
+    }, 
     computed:{
         angebote:function(){
             if(this.futuredObject.originalPrice){

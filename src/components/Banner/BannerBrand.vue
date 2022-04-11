@@ -6,7 +6,6 @@
                   <div class="col-12 d-flex justify-content-center">
                       <h1>Brand Logo</h1>
                   </div>
-                  <!-- non funziona reqire e non capisco perchè -->
                   <div class="col-12 d-flex">
                       <div class="col">
                         <img src="../../assets/img-progetto/b_logotype_1.png" alt="">                 

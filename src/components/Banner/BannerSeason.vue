@@ -20,7 +20,7 @@ export default {
 @import "src/assets/style.scss";  
 
 .center{
-   top: 80%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

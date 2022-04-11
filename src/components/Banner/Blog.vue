@@ -2,10 +2,10 @@
   <div class="my-container">
       <div class="container">
           <div class="row">
-              <div class="col-4 mt-5 " v-for="(element, index) in itemsBlog" :key="index">
+              <div class="col mt-5 " v-for="(element, index) in itemsBlog" :key="index">
                   <div class="card my-size border-0" >
                         <img :src="require(`../../assets/img-progetto/${element.img}`)" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="card-body text-start">
                             <h5 class="card-title">{{element.title}}</h5>
                             <p class="card-text">{{element.date}}.</p>
                             <p class="card-text">{{element.comments}} Comments.</p>

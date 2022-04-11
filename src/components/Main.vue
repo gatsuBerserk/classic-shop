@@ -48,9 +48,8 @@
     <!-- carousel -->
     <div class="my-container minW">
       <div class="container-fluid">
-        <div class="row border position-relative"> 
+        <div class="row position-relative"> 
            <button  class="position-absolute next"> &#10094; </button> 
-           <h1>carousel</h1>
           <Carousel  
           v-for="(element, index) in Featured" :key="index" 
           :image="element" 
@@ -62,9 +61,8 @@
     </div> 
     <BannerShopping/> 
     <div class="container-fluid">
-        <div class="row border position-relative"> 
+        <div class="row position-relative"> 
            <button  class="position-absolute next"> &#10094; </button> 
-           <h1>carousel</h1>
           <Carousel  
           v-for="(element, index) in Featured" :key="index" 
           :image="element" 
@@ -73,8 +71,20 @@
             <button class="position-absolute previus" >&#10095;</button>
         </div>
       </div>
-      <BannerArtDirector/> 
-      <BlogBanner/>
+      <BannerArtDirector/>
+      <div class="col-12 text-center border-bottom my-5">
+        <div class="title dCenter text-capitalize">
+            <span></span>
+              <h1>
+                From our blog
+              </h1>
+              <span></span>
+        </div> 
+              <p>The latest Classic Shop news </p>
+              <BlogBanner/>
+      </div>
+      
+      
       <ProductVote/>
       <BannerBrand/> 
       
@@ -109,7 +119,6 @@ export default {
     }, 
      data: function(){
         return{
-            activeElement: 0,
             Featured:[
                 {
                     img:"black_elegant_leather_jacket.jpg",
@@ -183,10 +192,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style.scss"; 
-// da cancellare
-.border{
-  border: 1px solid black;
-}
 
 .my-container{ 
     div.title{ 
@@ -231,5 +236,6 @@ export default {
     bottom: 50%;
     right: 0%;
 
-  }
+  } 
+   
 </style>

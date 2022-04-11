@@ -1,18 +1,9 @@
 <template>
-  
   <div class="col-3"> 
-    
       <figure >
         <img :src="require(`../../assets/img-progetto/${image.img}`)" class="card-img-top" alt="...">
       </figure> 
     </div>
-      
-      
-
-  
-
- 
-   
 </template>
 
 <script>
@@ -25,12 +16,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/assets/style.scss"; 
-.border{
-  border: 1px solid black;
-} 
-.filter{
-  filter:blur(3px)
-}
 
 
 </style>
