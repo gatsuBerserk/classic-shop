@@ -31,6 +31,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "src/assets/style.scss";
   .wrapper{
       height: 300px; 
       background-color: #303337; 
