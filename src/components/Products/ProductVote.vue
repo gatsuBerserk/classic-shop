@@ -103,7 +103,6 @@ export default {
             sale:[],
             vote:[], 
             reviews:[],
-            isSale:false,
             productFutured:[
                 {
                     article:"Black Jacket",
@@ -186,13 +185,6 @@ export default {
         } 
        
     },
-    // computed:{
-    //     star:function(){
-    //         if(element.vote != null){
-    //             return element.vote * "&#9733";
-    //         }
-    //     }
-    // }, 
      methods:{ 
         filterColor :function() {
             for(let i =0; i < this.productFutured.length; i++){

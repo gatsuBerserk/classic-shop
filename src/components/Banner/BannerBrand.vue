@@ -74,7 +74,8 @@ export default {
     background-color: rgb(246, 246, 246); 
     h1{
         opacity: .5; 
-        text-transform: uppercase;
+        text-transform: uppercase; 
+        margin-bottom: 2rem;
     }
     .my-container{
         img{

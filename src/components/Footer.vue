@@ -1,12 +1,17 @@
 <template>
   <div>
-      
-  </div>
+      <Subscrition/>
+    </div>
 </template>
 
 <script>
+import Subscrition from './footer-component/Subscrition.vue'
+
 export default { 
-    name: "FooterShop"
+    name: "FooterShop",
+    components:{
+        Subscrition,
+    },
 
 }
 </script>
