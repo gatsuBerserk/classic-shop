@@ -159,11 +159,6 @@ export default {
             ]
         } 
        
-    },
-    computed:{
-        star:function(){
-            return (this.reviews.vote * ("&#9733;") )
-        }
     }, 
      methods:{
         filterColor :function() {
